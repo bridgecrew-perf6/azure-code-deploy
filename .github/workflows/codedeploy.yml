@@ -1,0 +1,12 @@
+name: "Code Deploy"
+on:
+  push:
+  workflow_dispatch:
+    
+jobs:
+  run_worflow:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Code Deploy Simulation"
+    
