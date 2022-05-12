@@ -4,11 +4,13 @@ on:
   workflow_call:
     
 jobs:
-  run_worflow:
+  code_deploy::
+    name: Code Deploy
     runs-on: ubuntu-latest
-    env:
-      gh_environment: production 
     steps:
-    - run: |
-        echo "Code Deploy Simulation - approval needed for $(( var.gh_environment }}"
+    - name: Print env value
+      env:
+        gh_environment: production
+      run: |
+        echo "Code Deploy Simulation - approval needed for $gh_environment"
     
