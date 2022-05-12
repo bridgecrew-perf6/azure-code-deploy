@@ -6,9 +6,9 @@ on:
 jobs:
   run_worflow:
     runs-on: ubuntu-latest
+    with:
+      gh_environment: production 
     steps:
     - run: |
         echo "Code Deploy Simulation"
-      with:
-        gh_environment: production 
     
