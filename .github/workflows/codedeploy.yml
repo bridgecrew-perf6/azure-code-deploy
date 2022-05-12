@@ -6,7 +6,7 @@ on:
 jobs:
   run_worflow:
     runs-on: ubuntu-latest
-    with:
+    env:
       gh_environment: production 
     steps:
     - run: |
