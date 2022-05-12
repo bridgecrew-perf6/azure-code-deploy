@@ -9,4 +9,6 @@ jobs:
     steps:
     - run: |
         echo "Code Deploy Simulation"
+      with:
+        gh_environment: production 
     
