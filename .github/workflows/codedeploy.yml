@@ -4,7 +4,7 @@ on:
   workflow_call:
     
 jobs:
-  code_deploy::
+  code_deploy:
     name: Code Deploy
     runs-on: ubuntu-latest
     steps:
