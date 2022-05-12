@@ -10,5 +10,5 @@ jobs:
       gh_environment: production 
     steps:
     - run: |
-        echo "Code Deploy Simulation"
+        echo "Code Deploy Simulation - approval needed for $(( var.gh_environment }}"
     
