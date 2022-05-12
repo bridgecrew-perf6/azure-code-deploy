@@ -1,16 +1,18 @@
-name: "Code Deploy"
+name: "Deploy Code"
+
 on:
   push:
   workflow_call:
-    
+    inputs:
+      gh_environment:
+        description: 'Specifies the deployment environment'
+        required: false
+        type: string
+        default: none
 jobs:
   code_deploy:
-    name: Code Deploy
     runs-on: ubuntu-latest
+    environment: ${{ inputs.gh_environment }}
     steps:
-    - name: Print env value
-      env:
-        gh_environment: production
-      run: |
-        echo "Code Deploy Simulation - approval needed for $gh_environment"
-    
+      - name: "Deploy Code"
+        run: echo "Running code deployment"
